@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #171717;
+    width: 100%;
+    height: 100%;
+}
+.header {
+    width: 1312px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.Logo {
+    color: #FAFAF9;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+}
+.nav__links {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.nav-links__txt {
+    color: #FAFAF9;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* ----------MAIN----------- */
+.main {
+    width: 1312px;
+    height: 600px;
+    margin:10px auto;
+    position: relative;
+    transform: translateX(100px);
+    overflow: hidden;
+}
+.main__titile {
+    color: var(--text-1, #FAFAF9);
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 160px;
+font-style: normal;
+font-weight: 800;
+line-height: 170px; 
+letter-spacing: -2px;
+text-transform: uppercase;
+animation: workout 2s  cubic-bezier(0.455, 0.03, 0.515, 0.955); /* назва, скільки їду, як рухається */
+}/* delay- затримка анімації */
+@keyframes workout { /* звернення до анімації */
+    0%{
+    transform:translateX(-850px) ; /* спочатку анімації */
+    }
+    100%{
+        transform:translateX(0) /* в кінці анімації */
+    }
+}
+.main__txt {
+    color: var(--text-2, rgba(239, 237, 232, 0.65));
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+letter-spacing: 0.5px;
+width: 500px;
+margin: 50px 0;
+animation: text 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+@keyframes text {
+    0%{
+        transform: translateX(-500px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.main__button {
+    position: relative;
+    color: #FFF;
+    border: 1px solid #fff;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 22px;
+letter-spacing: 1px;
+padding: 24px 25px;
+background-color: #E6533C;
+border-radius: 10px;
+overflow: hidden;
+animation: man 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) alternate;
+}
+.main__button::before {
+    position: absolute;
+    content: '';
+    background-color: aqua;
+    width: 0%;
+    height: 5%;
+    border-radius: 10px;
+    left: 0;
+    bottom: 0;
+    animation: button-line 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
+}
+@keyframes button-line {
+    0% {
+        width: 0%;
+    }
+    100%{
+        width: 98%;
+    }
+}
+.main__button::after {
+    position: absolute;
+    content: '';
+    background-color: aqua;
+    width: 0%;
+    height: 5%;
+    border-radius: 10px;
+    right: 0;
+    top: 0;
+    animation: button-line-2 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
+}
+@keyframes button-line-2 {
+    0% {
+        width: 0%;
+    }
+    100%{
+        width: 98%;
+    }
+}
+.main__image-1 {
+    top: 60px;
+    width: 320px;
+    right: 270px;
+    position: absolute;
+    animation: man 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+@keyframes man {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.main__image-2 {
+    width: 170px;
+    height: 90px;
+    right: 520px;
+    top: 340px;
+    position: absolute;
+    animation: buble 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) alternate;
+}
+@keyframes buble {
+    0%{
+        transform: translateX(800px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.main__image-3 {
+    width: 160px;
+    height: 90px;
+    top: 430px;
+    right: 167px;
+    position: absolute;
+    animation: buble2 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) alternate;
+}
+@keyframes buble2 {
+    0%{
+        transform: translateX(800px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.main__image-4 {
+    width: 160px;
+    height: 90px;
+    top: 50px;
+    right: 190px;
+    position: absolute;
+    animation: buble3 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) alternate;
+}
+@keyframes buble3 {
+    0%{
+        transform: translateX(800px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.main__sponsor{
+    position: absolute;
+    bottom: -30px;
+}
+.sponsor__txt {
+color: rgba(239, 237, 232, 0.65);
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+}
